@@ -1,11 +1,11 @@
-from flask import Flask
+import flask
 
 from bokeh.embed import components
 from bokeh.plotting import figure
 from bokeh.resources import INLINE
 from bokeh.util.string import encode_utf8
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 colors = {
     'Black': '#000000',
@@ -28,10 +28,10 @@ def hello_world():
 def count_me(input_str):
     return input_str
 
-@app.route('/exotransmit/')
-def exotransmit():
+# @app.route('/exotransmit/')
+# def exotransmit():
 
-@app.route("/bokeh/")
+@app.route('/bokeh/')
 def polynomial():
     """ Very simple embedding of a polynomial chart
     """
